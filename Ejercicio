@@ -1,0 +1,48 @@
+public class Main
+{
+    public static void main(String[] args) {
+
+
+    int arr[] = new int[]{1,2,1,3,3,1,2,1,5,1}; 
+    int n = arr.length; 
+
+
+    boolean visited[] = new boolean[n]; 
+
+    for (int i = 0; i < n; i++) { 
+
+        // Skip this element if already processed 
+        if (visited[i] == true) 
+            continue; 
+
+        // Count frequency 
+        int count = 1; 
+        for (int j = i + 1; j < n; j++) { 
+            if (arr[i] == arr[j]) { 
+                visited[j] = true; 
+                count++; 
+
+            } 
+        } 
+            System.out.print(arr[i] + " " ); 
+             for (int k = 0; k < count; k++) { 
+                  System.out.print('*');
+
+             }
+                  System.out.println();
+
+    }
+    
+    public class Main {
+	static int[] myArray = {1,3,4,2,7,0};
+	public static void main(String[] args) {
+	 
+	 for(int i=0; i<myArray.length-1; i++){
+   for(int j=1;j<myArray.length;j++){
+      if(myArray[i]+myArray[j]==10){
+         System.out.println(myArray[i]+" "+myArray[j]);
+      }
+   }
+}
+	}
+}
